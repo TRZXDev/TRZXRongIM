@@ -1,0 +1,6 @@
+framework module DVSwitch {
+  umbrella header "DVSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

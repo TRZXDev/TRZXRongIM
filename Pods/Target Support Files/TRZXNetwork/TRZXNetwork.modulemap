@@ -1,0 +1,6 @@
+framework module TRZXNetwork {
+  umbrella header "TRZXNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

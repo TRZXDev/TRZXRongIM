@@ -1,0 +1,6 @@
+framework module TRZXDIYRefresh {
+  umbrella header "TRZXDIYRefresh-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module TRZXPersonalHome {
+  umbrella header "TRZXPersonalHome-umbrella.h"
+
+  export *
+  module * { export * }
+}

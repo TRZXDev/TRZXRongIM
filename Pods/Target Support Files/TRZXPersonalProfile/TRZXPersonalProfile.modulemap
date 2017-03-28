@@ -1,0 +1,6 @@
+framework module TRZXPersonalProfile {
+  umbrella header "TRZXPersonalProfile-umbrella.h"
+
+  export *
+  module * { export * }
+}

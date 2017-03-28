@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="KGk-i7-Jjw" customClass="TRZXInvestorDeatailCasesMoreTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owb-Ie-7wh">
+                        <rect key="frame" x="10" y="0.0" width="306" height="1"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="eY1-oc-vdr"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看全部" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NG-6h-0Zw">
+                        <rect key="frame" x="8" y="1" width="306" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="39.200000000000003" id="K6R-Lq-F0A"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5NG-6h-0Zw" firstAttribute="top" secondItem="Owb-Ie-7wh" secondAttribute="bottom" id="A75-9z-l1F"/>
+                    <constraint firstItem="Owb-Ie-7wh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AxM-cr-62Q"/>
+                    <constraint firstAttribute="bottom" secondItem="5NG-6h-0Zw" secondAttribute="bottom" constant="7.5" id="Gj2-Qs-H0s"/>
+                    <constraint firstAttribute="trailing" secondItem="Owb-Ie-7wh" secondAttribute="trailing" constant="10" id="OjR-lT-RQB"/>
+                    <constraint firstItem="5NG-6h-0Zw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="SIx-qz-AhG"/>
+                    <constraint firstAttribute="trailing" secondItem="5NG-6h-0Zw" secondAttribute="trailing" constant="12" id="tl6-0e-xe8"/>
+                    <constraint firstItem="Owb-Ie-7wh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uCn-8X-RWS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-221" y="-47.5"/>
+        </tableViewCell>
+    </objects>
+</document>

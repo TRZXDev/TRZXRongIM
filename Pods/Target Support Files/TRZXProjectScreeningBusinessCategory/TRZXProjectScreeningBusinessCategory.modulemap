@@ -1,0 +1,6 @@
+framework module TRZXProjectScreeningBusinessCategory {
+  umbrella header "TRZXProjectScreeningBusinessCategory-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module TRZXShufflingView {
+  umbrella header "TRZXShufflingView-umbrella.h"
+
+  export *
+  module * { export * }
+}

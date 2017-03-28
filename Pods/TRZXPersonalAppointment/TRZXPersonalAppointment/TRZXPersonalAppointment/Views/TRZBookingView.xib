@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRZBookingView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="告诉专家你要请教的问题(30-300字)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-Yu-bGy">
+                    <rect key="frame" x="10" y="0.0" width="355" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0e4-vF-g7A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iif-XY-Q4l">
+                    <rect key="frame" x="10" y="60" width="355" height="1"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="9IN-48-G2Y"/>
+                        <constraint firstAttribute="height" constant="1" id="T1s-14-6nv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="例如:回国半年，准备创业，想做一个健身O2O项目；之前在美国做律师，转变，想快速了解和适应国内的创业环境。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9o-Qb-jgL">
+                    <rect key="frame" x="12" y="69" width="353" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-mO-eM0">
+                    <rect key="frame" x="8" y="61" width="357" height="576"/>
+                    <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300字" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-lT-wi9">
+                    <rect key="frame" x="330" y="637" width="35" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iif-XY-Q4l" firstAttribute="top" secondItem="Sxr-Yu-bGy" secondAttribute="bottom" id="4RL-dB-sYm"/>
+                <constraint firstItem="Sxr-Yu-bGy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="4wO-ca-AHe"/>
+                <constraint firstItem="m9o-Qb-jgL" firstAttribute="top" secondItem="iif-XY-Q4l" secondAttribute="bottom" constant="8" id="6lV-Vs-vdg"/>
+                <constraint firstItem="m9o-Qb-jgL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="Cga-vT-f5v"/>
+                <constraint firstItem="c0K-mO-eM0" firstAttribute="top" secondItem="iif-XY-Q4l" secondAttribute="bottom" id="E9O-Tc-dgp"/>
+                <constraint firstItem="UVP-lT-wi9" firstAttribute="top" secondItem="c0K-mO-eM0" secondAttribute="bottom" id="LFI-Eu-ntO"/>
+                <constraint firstItem="iif-XY-Q4l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="R7a-Or-w7G"/>
+                <constraint firstItem="c0K-mO-eM0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="S9U-w4-nDg"/>
+                <constraint firstAttribute="trailing" secondItem="c0K-mO-eM0" secondAttribute="trailing" constant="10" id="XM3-wG-K9l"/>
+                <constraint firstAttribute="bottom" secondItem="UVP-lT-wi9" secondAttribute="bottom" id="ZRo-sy-QiH"/>
+                <constraint firstAttribute="bottom" secondItem="c0K-mO-eM0" secondAttribute="bottom" constant="30" id="ad0-Nn-F32"/>
+                <constraint firstAttribute="trailing" secondItem="m9o-Qb-jgL" secondAttribute="trailing" constant="10" id="bFR-1S-pOn"/>
+                <constraint firstAttribute="trailing" secondItem="Sxr-Yu-bGy" secondAttribute="trailing" constant="10" id="cUW-Lr-3gb"/>
+                <constraint firstItem="Sxr-Yu-bGy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eAF-RT-ZCz"/>
+                <constraint firstAttribute="trailing" secondItem="iif-XY-Q4l" secondAttribute="trailing" constant="10" id="jFR-Rx-YlG"/>
+                <constraint firstAttribute="trailing" secondItem="UVP-lT-wi9" secondAttribute="trailing" constant="10" id="lGY-7D-sR2"/>
+            </constraints>
+            <connections>
+                <outlet property="bgTextLabel" destination="m9o-Qb-jgL" id="XUt-vZ-zrm"/>
+                <outlet property="dLabel" destination="UVP-lT-wi9" id="gRb-1V-TP5"/>
+                <outlet property="myTextTitle" destination="Sxr-Yu-bGy" id="GhV-QS-Aaf"/>
+                <outlet property="myTextView" destination="c0K-mO-eM0" id="sqF-ya-MZp"/>
+            </connections>
+            <point key="canvasLocation" x="414" y="172"/>
+        </view>
+    </objects>
+</document>

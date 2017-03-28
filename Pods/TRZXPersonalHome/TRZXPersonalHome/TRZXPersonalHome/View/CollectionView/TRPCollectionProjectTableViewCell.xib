@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TRPCollectionProjectTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1r-sX-RfF">
+                        <rect key="frame" x="10" y="0.0" width="300" height="79.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TRPshareimg_delete" translatesAutoresizingMaskIntoConstraints="NO" id="zgf-87-Yr7">
+                                <rect key="frame" x="10" y="-0.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="G6B-t4-O2i"/>
+                                    <constraint firstAttribute="height" constant="80" id="bKQ-xj-9Rq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容已删除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXN-cN-vpF">
+                                <rect key="frame" x="104" y="29.5" width="145" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="S0f-jj-uSN"/>
+                                    <constraint firstAttribute="width" constant="145" id="yjB-J0-EUY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zgf-87-Yr7" firstAttribute="leading" secondItem="c1r-sX-RfF" secondAttribute="leading" constant="10" id="1fL-FN-4LM"/>
+                            <constraint firstItem="GXN-cN-vpF" firstAttribute="leading" secondItem="zgf-87-Yr7" secondAttribute="trailing" constant="14" id="9Dv-L5-vge"/>
+                            <constraint firstItem="GXN-cN-vpF" firstAttribute="centerY" secondItem="zgf-87-Yr7" secondAttribute="centerY" id="G8e-SQ-DN1"/>
+                            <constraint firstItem="zgf-87-Yr7" firstAttribute="centerY" secondItem="c1r-sX-RfF" secondAttribute="centerY" id="QF7-zC-a2C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="c1r-sX-RfF" secondAttribute="trailing" constant="10" id="Cun-oF-beP"/>
+                    <constraint firstItem="c1r-sX-RfF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Q7P-ep-zhu"/>
+                    <constraint firstAttribute="bottom" secondItem="c1r-sX-RfF" secondAttribute="bottom" constant="10" id="WhV-lc-NrW"/>
+                    <constraint firstItem="c1r-sX-RfF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gR1-I1-C7B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="c1r-sX-RfF" id="GWv-Xs-1zY"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="TRPshareimg_delete" width="16" height="16"/>
+    </resources>
+</document>

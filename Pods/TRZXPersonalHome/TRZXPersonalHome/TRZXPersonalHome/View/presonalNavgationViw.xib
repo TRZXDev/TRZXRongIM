@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="presonalNavgationViw">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mae-x6-a11">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="sPp-id-05l"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人主页" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtX-yO-A0d">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5H0-KV-Llr"/>
+                        <constraint firstAttribute="width" constant="150" id="LOX-cj-Ka1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqi-KC-4eN">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="28" id="1C6-M4-Tys"/>
+                        <constraint firstAttribute="height" constant="26" id="g7f-l8-s7c"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="6" minY="8" maxX="6" maxY="0.0"/>
+                    <state key="normal" image="bianjiW.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEp-GF-9AF">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="6Qa-NA-XLO"/>
+                        <constraint firstAttribute="width" constant="34" id="H2e-YC-T12"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="4" minY="8" maxX="14" maxY="0.0"/>
+                    <state key="normal" image="shareW.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRr-EA-Ili">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="83" id="h6z-lH-W8Q"/>
+                        <constraint firstAttribute="height" constant="43" id="vYw-j8-Pwa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="15" maxX="25" maxY="11"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="14" maxX="63" maxY="12"/>
+                    <state key="normal" title="返回" image="返回白.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" title="返回"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mae-x6-a11" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2J9-hb-NVv"/>
+                <constraint firstItem="CRr-EA-Ili" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6Bg-Ak-vqG"/>
+                <constraint firstItem="VEp-GF-9AF" firstAttribute="leading" secondItem="lqi-KC-4eN" secondAttribute="trailing" constant="8" id="FTX-Vx-1qo"/>
+                <constraint firstItem="lqi-KC-4eN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="HqJ-Pj-UF4"/>
+                <constraint firstAttribute="trailing" secondItem="VEp-GF-9AF" secondAttribute="trailing" constant="7" id="Mg2-QU-OGI"/>
+                <constraint firstItem="ZtX-yO-A0d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Oqp-vq-KdK"/>
+                <constraint firstItem="VEp-GF-9AF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Rq4-mw-U97"/>
+                <constraint firstItem="CRr-EA-Ili" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="b64-0f-Uy7"/>
+                <constraint firstAttribute="trailing" secondItem="mae-x6-a11" secondAttribute="trailing" id="cqb-v7-a2L"/>
+                <constraint firstItem="mae-x6-a11" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vqt-2b-gJS"/>
+                <constraint firstItem="ZtX-yO-A0d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="28" id="xH0-qu-dsL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="mae-x6-a11" id="Kkg-EQ-uI9"/>
+                <outlet property="biaotiLabel" destination="ZtX-yO-A0d" id="jbJ-SW-Zci"/>
+                <outlet property="fanhuiBtn" destination="CRr-EA-Ili" id="jW5-Ge-sfM"/>
+                <outlet property="fenxiangBtn" destination="VEp-GF-9AF" id="gLL-cO-EJD"/>
+                <outlet property="shoucangBtn" destination="lqi-KC-4eN" id="Cr8-eN-VDo"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="317"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bianjiW.png" width="34" height="34"/>
+        <image name="shareW.png" width="31" height="35"/>
+        <image name="返回白.png" width="18" height="31"/>
+    </resources>
+</document>

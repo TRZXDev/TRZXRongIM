@@ -1,0 +1,6 @@
+framework module TRZXFriendCircle {
+  umbrella header "TRZXFriendCircle-umbrella.h"
+
+  export *
+  module * { export * }
+}

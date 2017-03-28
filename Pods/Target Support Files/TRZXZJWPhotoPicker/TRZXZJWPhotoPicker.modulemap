@@ -1,0 +1,6 @@
+framework module TRZXZJWPhotoPicker {
+  umbrella header "TRZXZJWPhotoPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

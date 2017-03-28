@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HEa-HL-UZu" customClass="PersonalZBCollectionView">
+            <rect key="frame" x="0.0" y="0.0" width="98" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6j-VU-IkM">
+                    <rect key="frame" x="0.0" y="0.0" width="98" height="135"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="展位图.png" translatesAutoresizingMaskIntoConstraints="NO" id="t7Z-uD-zoS">
+                            <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="98" id="94w-Mf-ajd"/>
+                                <constraint firstAttribute="width" constant="98" id="TlC-DM-h4O"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播直播直播直播直播直播直播直播直播直播" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyH-ad-pdo">
+                            <rect key="frame" x="5" y="106" width="88" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="88" id="Cf2-nL-Yff"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="98" id="0co-Sk-Pwf"/>
+                        <constraint firstAttribute="height" constant="135" id="9Vh-Us-qWu"/>
+                        <constraint firstItem="t7Z-uD-zoS" firstAttribute="leading" secondItem="g6j-VU-IkM" secondAttribute="leading" id="Hmb-v2-vS7"/>
+                        <constraint firstItem="JyH-ad-pdo" firstAttribute="top" secondItem="t7Z-uD-zoS" secondAttribute="bottom" constant="8" id="NVc-pe-cJq"/>
+                        <constraint firstItem="t7Z-uD-zoS" firstAttribute="top" secondItem="g6j-VU-IkM" secondAttribute="top" id="cOm-rt-6Jp"/>
+                        <constraint firstItem="JyH-ad-pdo" firstAttribute="centerX" secondItem="g6j-VU-IkM" secondAttribute="centerX" id="yCa-kM-t5D"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="回看.png" translatesAutoresizingMaskIntoConstraints="NO" id="bho-jw-jod">
+                    <rect key="frame" x="67" y="5" width="26" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="g6j-VU-IkM" firstAttribute="leading" secondItem="HEa-HL-UZu" secondAttribute="leading" id="jr1-ph-WC0"/>
+                <constraint firstItem="g6j-VU-IkM" firstAttribute="top" secondItem="HEa-HL-UZu" secondAttribute="top" id="xsF-pS-xYZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bjView" destination="g6j-VU-IkM" id="345-93-vTq"/>
+                <outlet property="nameLable" destination="JyH-ad-pdo" id="uP6-yU-uij"/>
+                <outlet property="topImage" destination="t7Z-uD-zoS" id="16b-GQ-UxW"/>
+            </connections>
+            <point key="canvasLocation" x="177" y="267"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="回看.png" width="51" height="30"/>
+        <image name="展位图.png" width="530" height="298"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module TRZXMyWallet {
+  umbrella header "TRZXMyWallet-umbrella.h"
+
+  export *
+  module * { export * }
+}

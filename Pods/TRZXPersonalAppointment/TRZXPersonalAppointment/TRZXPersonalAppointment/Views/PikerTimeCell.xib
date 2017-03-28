@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PikerTimeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPa-KH-Kjz">
+                        <rect key="frame" x="8" y="8" width="304" height="233"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q8-2L-bP8">
+                                <rect key="frame" x="8" y="8" width="32" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="J4J-ep-ifC"/>
+                                    <constraint firstAttribute="height" constant="21" id="p1f-EC-zEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL9-yv-rtF">
+                                <rect key="frame" x="85" y="8" width="134" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="OXc-aa-53H"/>
+                                    <constraint firstAttribute="height" constant="21" id="R55-UR-upE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="点击添加约见的时间">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTime:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NKT-ws-RlG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地点:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-n9-6LT">
+                                <rect key="frame" x="9" y="202" width="32" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="5Lx-jT-tok"/>
+                                    <constraint firstAttribute="height" constant="21" id="FKd-uU-eDg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haT-vM-0Jn">
+                                <rect key="frame" x="85" y="202" width="134" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9xm-GX-vaR"/>
+                                    <constraint firstAttribute="width" constant="134" id="ep8-xz-JYp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="点击添加约见的地点">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDD:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eh8-or-258"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFK-bV-M3c">
+                                <rect key="frame" x="9" y="36" width="286" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="uct-vG-uUY"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647058823529413" green="0.68627450980392157" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="haT-vM-0Jn" firstAttribute="centerX" secondItem="BPa-KH-Kjz" secondAttribute="centerX" id="67z-wn-gK2"/>
+                            <constraint firstItem="JFK-bV-M3c" firstAttribute="centerX" secondItem="BPa-KH-Kjz" secondAttribute="centerX" id="736-wJ-emu"/>
+                            <constraint firstItem="9Q8-2L-bP8" firstAttribute="leading" secondItem="BPa-KH-Kjz" secondAttribute="leading" constant="8" id="GOS-2z-m1M"/>
+                            <constraint firstAttribute="bottom" secondItem="Es5-n9-6LT" secondAttribute="bottom" constant="10" id="K1l-9k-3XX"/>
+                            <constraint firstAttribute="trailing" secondItem="JFK-bV-M3c" secondAttribute="trailing" constant="7" id="WLw-ID-ofK"/>
+                            <constraint firstItem="9Q8-2L-bP8" firstAttribute="top" secondItem="BPa-KH-Kjz" secondAttribute="top" constant="8" id="XjU-mi-beB"/>
+                            <constraint firstItem="Es5-n9-6LT" firstAttribute="leading" secondItem="BPa-KH-Kjz" secondAttribute="leading" constant="9" id="bah-Kj-yz7"/>
+                            <constraint firstItem="GL9-yv-rtF" firstAttribute="top" secondItem="BPa-KH-Kjz" secondAttribute="top" constant="8" id="k79-xT-cVa"/>
+                            <constraint firstItem="JFK-bV-M3c" firstAttribute="leading" secondItem="BPa-KH-Kjz" secondAttribute="leading" constant="9" id="lil-7j-RfF"/>
+                            <constraint firstItem="GL9-yv-rtF" firstAttribute="centerX" secondItem="BPa-KH-Kjz" secondAttribute="centerX" id="ltq-m7-bvD"/>
+                            <constraint firstAttribute="bottom" secondItem="haT-vM-0Jn" secondAttribute="bottom" constant="10" id="qiQ-JS-xQg"/>
+                            <constraint firstItem="JFK-bV-M3c" firstAttribute="centerY" secondItem="BPa-KH-Kjz" secondAttribute="centerY" id="t3V-OK-0R5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WLw-ID-ofK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="BPa-KH-Kjz" secondAttribute="bottom" constant="8" id="9IO-hG-mcj"/>
+                    <constraint firstAttribute="trailing" secondItem="BPa-KH-Kjz" secondAttribute="trailing" constant="8" id="FKF-jX-1QX"/>
+                    <constraint firstItem="BPa-KH-Kjz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Rke-qV-f8F"/>
+                    <constraint firstItem="BPa-KH-Kjz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Yjp-xT-gwQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="pikerTime" destination="JFK-bV-M3c" id="aCc-Cs-6rW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

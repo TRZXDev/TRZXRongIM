@@ -1,0 +1,6 @@
+framework module TRZXProjectDetail {
+  umbrella header "TRZXProjectDetail-umbrella.h"
+
+  export *
+  module * { export * }
+}

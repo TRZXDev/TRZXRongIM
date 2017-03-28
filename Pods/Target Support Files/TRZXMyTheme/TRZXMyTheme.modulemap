@@ -1,0 +1,6 @@
+framework module TRZXMyTheme {
+  umbrella header "TRZXMyTheme-umbrella.h"
+
+  export *
+  module * { export * }
+}

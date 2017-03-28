@@ -1,0 +1,6 @@
+framework module ZBCellConfig {
+  umbrella header "ZBCellConfig-umbrella.h"
+
+  export *
+  module * { export * }
+}

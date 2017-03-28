@@ -1,0 +1,6 @@
+framework module TRZXNavigationTableViewHeaderView {
+  umbrella header "TRZXNavigationTableViewHeaderView-umbrella.h"
+
+  export *
+  module * { export * }
+}

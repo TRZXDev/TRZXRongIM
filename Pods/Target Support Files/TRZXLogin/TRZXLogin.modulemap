@@ -1,0 +1,6 @@
+framework module TRZXLogin {
+  umbrella header "TRZXLogin-umbrella.h"
+
+  export *
+  module * { export * }
+}

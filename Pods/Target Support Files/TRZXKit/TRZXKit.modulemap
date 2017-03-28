@@ -1,0 +1,6 @@
+framework module TRZXKit {
+  umbrella header "TRZXKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

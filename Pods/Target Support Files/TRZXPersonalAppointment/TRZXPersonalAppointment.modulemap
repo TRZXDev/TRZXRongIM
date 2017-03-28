@@ -1,0 +1,6 @@
+framework module TRZXPersonalAppointment {
+  umbrella header "TRZXPersonalAppointment-umbrella.h"
+
+  export *
+  module * { export * }
+}

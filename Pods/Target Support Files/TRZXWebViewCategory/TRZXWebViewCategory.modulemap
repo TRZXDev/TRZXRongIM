@@ -1,0 +1,6 @@
+framework module TRZXWebViewCategory {
+  umbrella header "TRZXWebViewCategory-umbrella.h"
+
+  export *
+  module * { export * }
+}

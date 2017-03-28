@@ -1,0 +1,6 @@
+framework module TRZXShare {
+  umbrella header "TRZXShare-umbrella.h"
+
+  export *
+  module * { export * }
+}

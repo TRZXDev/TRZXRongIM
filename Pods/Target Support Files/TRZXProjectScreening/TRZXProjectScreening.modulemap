@@ -1,0 +1,6 @@
+framework module TRZXProjectScreening {
+  umbrella header "TRZXProjectScreening-umbrella.h"
+
+  export *
+  module * { export * }
+}

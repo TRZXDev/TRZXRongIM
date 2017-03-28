@@ -1,0 +1,6 @@
+framework module TRZXInvestorDetail {
+  umbrella header "TRZXInvestorDetail-umbrella.h"
+
+  export *
+  module * { export * }
+}

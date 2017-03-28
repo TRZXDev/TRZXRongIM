@@ -1,0 +1,6 @@
+framework module TRZXMSSBrowse {
+  umbrella header "TRZXMSSBrowse-umbrella.h"
+
+  export *
+  module * { export * }
+}
