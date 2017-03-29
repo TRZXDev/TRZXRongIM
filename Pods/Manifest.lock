@@ -23,7 +23,7 @@ PODS:
     - AMapFoundation (~> 1.2)
   - Aspects (1.4.1)
   - AXNavigationBackItemInjection (0.0.1)
-  - AXWebViewController (0.4.4):
+  - AXWebViewController (0.4.5):
     - Aspects
     - AXNavigationBackItemInjection
     - NJKWebViewProgress
@@ -170,29 +170,7 @@ PODS:
     - TRZXComplaint
     - TRZXKit
     - TRZXNetwork
-  - TRZXPersonalHome (0.1.24):
-    - DVSwitch
-    - FDStackView
-    - Masonry
-    - MJExtension
-    - MLLabel
-    - ReactiveCocoa (~> 2.5)
-    - SDAutoLayout
-    - SDWebImage
-    - TRZXDIYRefresh
-    - TRZXFriendCircle
-    - TRZXLogin
-    - TRZXMyTheme
-    - TRZXMyWallet
-    - TRZXNetwork
-    - TRZXPersonalAppointment
-    - TRZXPersonalCustomerCenter
-    - TRZXPersonalProfile
-    - TRZXShare
-    - TRZXShufflingView
   - TRZXPersonalJump (0.0.3):
-    - CTMediator
-  - TRZXPersonalProfile (0.0.6):
     - CTMediator
   - TRZXProject (0.0.11):
     - Masonry
@@ -233,8 +211,6 @@ PODS:
   - TRZXShare/Openshare (0.0.4):
     - TRZXShareView
   - TRZXShareView (0.0.1)
-  - TRZXShufflingView (0.0.4):
-    - AFNetworking
   - TRZXWebView (0.0.3):
     - AXWebViewController
   - TRZXWebViewCategory (0.0.3):
@@ -273,7 +249,6 @@ DEPENDENCIES:
   - TRZXNetwork
   - TRZXPersonalAppointment
   - TRZXPersonalCustomerCenter
-  - TRZXPersonalHome
   - TRZXPersonalJump
   - TRZXProject
   - TRZXProjectDetailCategory
@@ -289,7 +264,7 @@ SPEC CHECKSUMS:
   AMapSearch: 7a6ebc20a42e34a021b042b047f198082fc2fc30
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   AXNavigationBackItemInjection: 0ab0742fafd9ec37e44b8767c96cbbc77ec13575
-  AXWebViewController: 6f7c07a470987f54c0be396f38e06d52cd2929e4
+  AXWebViewController: f595c9b7ee12d5c6dbdd434a9e56ce584649711a
   CTMediator: c9a1203561e2232cb9a72822659159a02ae3cf20
   DVSwitch: cc13ee6ca6244edcb2afa07b6f07978a0b053c1d
   FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
@@ -320,9 +295,7 @@ SPEC CHECKSUMS:
   TRZXNetwork: d6ce75a420218ed4b6b95f10220442f175947125
   TRZXPersonalAppointment: 181ca4a8463b0fb73048474fe15a16d6ffba8705
   TRZXPersonalCustomerCenter: 9822a34b41ee77454b70e206346744f0d53b92c8
-  TRZXPersonalHome: 2daae8e86474c66fad968abb171219336728479b
   TRZXPersonalJump: 655818434a87aa974285760d484db097d315480f
-  TRZXPersonalProfile: 7f986519e1872f6d1d385b4113b8cab08477aaed
   TRZXProject: 92d34416707b714f934c7f5cd1d7e11b88adcb8c
   TRZXProjectDetail: 78df43a2633702bcda3d8be9130140c7538ea12d
   TRZXProjectDetailCategory: 71589b03fec7b46e89e8c4ea30b062380ef79bb8
@@ -330,7 +303,6 @@ SPEC CHECKSUMS:
   TRZXProjectScreeningBusinessCategory: 3f7c61fe9d8ae6d6b071f013c119b7c8f96a8d43
   TRZXShare: ea2ebd5d9e18df5c513c2fd9dd539228cd160955
   TRZXShareView: b35a8aaafe753e1005c73272177867dd14066e13
-  TRZXShufflingView: c08a623176d51abfd57ac8b400742d64a41606a5
   TRZXWebView: c890a82e4ad4773f48e60e55bccf4bb30f6e42e2
   TRZXWebViewCategory: 2e2e0e440cc23f77071c21a7ff66ccd5bdaca25b
   TRZXZJWPhotoPicker: 84f869c75d84d33b44741aa59d408b3456814a51
@@ -340,6 +312,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZBCellConfig: 867757a4d63682bede4c27ffdaaee6b19e174e73
 
-PODFILE CHECKSUM: f1661b6a3af530bbe94bb4c16cc4f7145c191065
+PODFILE CHECKSUM: 4db71132cfe66afb9fd1aaf6dc4bbdac1c430ccd
 
 COCOAPODS: 1.2.0

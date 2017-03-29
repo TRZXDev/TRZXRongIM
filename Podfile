@@ -22,7 +22,6 @@ target 'TRZXRongIM' do
   pod 'FMDB'
   pod 'TRZXLogin'
 #  pod 'TRZXPersonalHome'
-  pod 'TRZXPersonalHome'
   pod 'TRZXPersonalJump'
   pod 'TRZXShare'
   pod "TRZXInvestorDetail"

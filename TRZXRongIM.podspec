@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     s.dependency "AMapLocation"
     s.dependency "FMDB"
     s.dependency "TRZXLogin"
-    s.dependency "TRZXPersonalHome"
+#    s.dependency "TRZXPersonalHome"
     s.dependency "TRZXPersonalJump"
     s.dependency "TRZXShare"
     s.dependency "TRZXInvestorDetail"

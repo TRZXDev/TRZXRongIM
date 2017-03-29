@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D2E18DA3F4A4FBBC4DF854ADF3EA3DD9'
+               BlueprintIdentifier = 'B5E67B332CFBB2DCFCB88CE9E6A05D85'
                BlueprintName = 'TRZXPersonalJump'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TRZXPersonalJump.framework'>

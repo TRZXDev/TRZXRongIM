@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3B3000CB6DD18A63F42CDFEE16058F28'
+               BlueprintIdentifier = 'B8E4A20AACDFF0C38A53C0B974DE4DCC'
                BlueprintName = 'TRZXNavigationTableViewHeaderView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TRZXNavigationTableViewHeaderView.framework'>
