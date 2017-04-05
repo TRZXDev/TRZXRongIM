@@ -21,7 +21,7 @@
 #import "RCDGroupChatViewController.h"
 #import "RCDPublicMessage.h"
 #import "RCDGroupInfo.h"
-#import "OpenShare.h"
+#import "RCDCommonDefine.h"
 
 
 @interface RCDSendSelectedAddressViewController ()<UISearchBarDelegate,UISearchControllerDelegate,UITableViewDataSource,UITableViewDelegate>

@@ -146,14 +146,19 @@ typedef void(^MAOfflineMapNewestVersionBlock)(BOOL hasNewestVersion);
 
 @interface MAOfflineMap (Deprecated)
 
+///deprecated
 @property (nonatomic, readonly) NSArray *offlineCities __attribute__ ((deprecated("use cities instead")));
 
+///deprecated
 - (void)downloadCity:(MAOfflineCity *)city downloadBlock:(MAOfflineMapDownloadBlock)downloadBlock __attribute__ ((deprecated("use - (void)downloadItem:(MAOfflineItem *)item shouldContinueWhenAppEntersBackground:(BOOL)shouldContinueWhenAppEntersBackground downloadBlock:(MAOfflineMapDownloadBlock)downloadBlock instead")));
 
+///deprecated
 - (void)downloadCity:(MAOfflineCity *)city shouldContinueWhenAppEntersBackground:(BOOL)shouldContinueWhenAppEntersBackground downloadBlock:(MAOfflineMapDownloadBlock)downloadBlock __attribute__ ((deprecated("use - (void)downloadItem:(MAOfflineItem *)item shouldContinueWhenAppEntersBackground:(BOOL)shouldContinueWhenAppEntersBackground downloadBlock:(MAOfflineMapDownloadBlock)downloadBlock instead")));
 
+///deprecated
 - (BOOL)isDownloadingForCity:(MAOfflineCity *)city __attribute__ ((deprecated("use - (BOOL)isDownloadingForItem:(MAOfflineItem *)item instead")));
 
+///deprecated
 - (void)pause:(MAOfflineCity *)city __attribute__ ((deprecated("use - (void)pauseItem:(MAOfflineItem *)item instead")));
 
 @end

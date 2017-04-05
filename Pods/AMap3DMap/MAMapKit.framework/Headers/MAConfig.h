@@ -41,4 +41,10 @@
 #define MA_INCLUDE_OVERLAY_GEODESIC 1
 #endif
 
+#ifndef MA_CUSTOM_MAP
+#define MA_CUSTOM_MAP 0
+#endif
+
+
+
 #endif /* MAConfig_h */

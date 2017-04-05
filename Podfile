@@ -27,7 +27,7 @@ target 'TRZXRongIM' do
   pod "TRZXInvestorDetail"
   pod "TRZXInvestorDetailCategory"
   pod "TRZXMSSBrowse"
-  pod "TRZXWebView"
+#  pod "TRZXWebView"
   pod "TRZXWebViewCategory"
   pod "TRZXProjectDetailCategory"
   pod "TRZXProject"

@@ -13,7 +13,6 @@
 #import "RCDUserInfo.h"
 #import "RCDSelectedSendView.h"
 #import "RCDCollectionMessage.h"
-#import "OpenShare.h"
 #import "RCDGroupInfo.h"
 #import "RCDAddFriendCell.h"
 #import "RCDSendSelectedCreateNewChatCell.h"

@@ -15,7 +15,10 @@
 #define kMAOverlayRendererDefaultFillColor [UIColor colorWithRed:0.77 green:0.88 blue:0.94 alpha:0.8]
 
 ///该类是地图覆盖物Renderer的基类, 提供绘制overlay的接口但并无实际的实现（render相关方法只能在重写后的glRender方法中使用）
-@interface MAOverlayRenderer : NSObject
+@interface MAOverlayRenderer : NSObject {
+    @protected
+    BOOL _needsUpdate;
+}
 
 ///关联的overlay对象
 @property (nonatomic, readonly, retain) id <MAOverlay> overlay;
@@ -29,7 +32,6 @@
 ///笔触纹理id, 修改纹理id参考 - (GLuint)loadStrokeTextureImage:(UIImage *)textureImage
 @property (nonatomic, readonly) GLuint strokeTextureID;
 
-
 /**
  * @brief 初始化并返回一个Overlay Renderer
  * @param overlay 关联的overlay对象
@@ -38,32 +40,45 @@
 - (instancetype)initWithOverlay:(id <MAOverlay>)overlay;
 
 /**
- * @brief 将MAMapPoint转化为相对于receiver的本地坐标
+ *  @brief 获取当前地图view矩阵，数组长度为16，无需外界释放. 需要添加至地图后，才能获取有效矩阵数据，否则返回NULL
+ *  @return 矩阵数组
+ */
+- (float *)getViewMatrix;
+
+/**
+ *  @brief 获取当前地图projection矩阵，数组长度为16，无需外界释放. 需要添加至地图后，才能获取有效矩阵数据，否则返回NULL
+ *  @return 矩阵数组
+ */
+- (float *)getProjectionMatrix;
+
+/**
+ * @brief 将MAMapPoint转化为相对于receiver的本地坐标，deprecated
  * @param mapPoint 要转化的MAMapPoint
  * @return 相对于receiver的本地坐标
  */
-- (CGPoint)pointForMapPoint:(MAMapPoint)mapPoint;
+- (CGPoint)pointForMapPoint:(MAMapPoint)mapPoint __attribute__((deprecated("已废弃")));
 
 /**
- * @brief 将相对于receiver的本地坐标转化为MAMapPoint
+ * @brief 将相对于receiver的本地坐标转化为MAMapPoint, deprecated
  * @param point 要转化的相对于receiver的本地坐标
  * @return MAMapPoint
  */
-- (MAMapPoint)mapPointForPoint:(CGPoint)point;
+- (MAMapPoint)mapPointForPoint:(CGPoint)point __attribute__((deprecated("已废弃")));
 
 /**
- * @brief 将MAMapRect转化为相对于receiver的本地rect
+ * @brief 将MAMapRect转化为相对于receiver的本地rect, deprecated
  * @param mapRect 要转化的MAMapRect
  * @return 相对于receiver的本地rect
  */
-- (CGRect)rectForMapRect:(MAMapRect)mapRect;
+- (CGRect)rectForMapRect:(MAMapRect)mapRect __attribute__((deprecated("已废弃")));
 
 /**
- * @brief 将相对于receiver的本地rect转化为MAMapRect
+ * @brief 将相对于receiver的本地rect转化为MAMapRect, deprecated
  * @param rect 要转化的相对于receiver的本地rect
  * @return MAMapRect
  */
-- (MAMapRect)mapRectForRect:(CGRect)rect;
+- (MAMapRect)mapRectForRect:(CGRect)rect __attribute__((deprecated("已废弃")));
+
 
 /**
  * @brief 将MAMapPoint转换为opengles可以直接使用的坐标
@@ -88,9 +103,9 @@
 - (CGFloat)glWidthForWindowWidth:(CGFloat)windowWidth;
 
 /**
- * @brief OpenGLES坐标系发生改变, 重新计算缓存的OpenGLES坐标
+ * @brief OpenGLES坐标系发生改变, 重新计算缓存的OpenGLES坐标, deprecated
  */
-- (void)referenceDidChange;
+- (void)referenceDidChange __attribute__((deprecated("已废弃")));
 
 /**
  * @brief 使用OpenGLES 绘制线
@@ -156,6 +171,7 @@
                      drawStyleIndexes:(NSArray *)drawStyleIndexes
                                looped:(BOOL)looped;
 
+
 /**
  * @brief 使用OpenGLES 绘制多段颜色线
  * @param points           OpenGLES坐标系点指针, 参考- (CGPoint)glPointForMapPoint:(MAMapPoint)mapPoint, - (CGPoint *)glPointsForMapPoints:(MAMapPoint *)mapPoints count:(NSUInteger)count
@@ -180,6 +196,7 @@
                   LineCapType:(MALineCapType)lineCapType
                      lineDash:(BOOL)lineDash;
 
+
 /**
  * @brief 使用OpenGLES 绘制区域
  * @param points           OpenGLES坐标系点指针, 参考- (CGPoint)glPointForMapPoint:(MAMapPoint)mapPoint, - (CGPoint *)glPointsForMapPoints:(MAMapPoint *)mapPoints count:(NSUInteger)count
@@ -191,6 +208,7 @@
                     pointCount:(NSUInteger)pointCount
                      fillColor:(UIColor *)fillColor
               usingTriangleFan:(BOOL)usingTriangleFan;
+
 
 /**
  * @brief 使用OpenGLES 绘制区域(带轮廓线) \n注意：strokeLineWidth为0 或 strokeColor为nil 时不绘制轮廓线。
@@ -204,12 +222,13 @@
  * @param usingTriangleFan   若必为凸多边形输入YES，可能为凹多边形输入NO
  */
 - (void)renderStrokedRegionWithPoints:(CGPoint *)points pointCount:(NSUInteger)pointCount
-                           fillColor:(UIColor *)fillColor
+                            fillColor:(UIColor *)fillColor
                           strokeColor:(UIColor *)strokeColor
-                     strokeLineWidth:(CGFloat)strokeLineWidth
+                      strokeLineWidth:(CGFloat)strokeLineWidth
                    strokeLineJoinType:(MALineJoinType)strokeLineJoinType
-                      strokeLineDash:(BOOL)strokeLineDash
-                    usingTriangleFan:(BOOL)usingTriangleFan;
+                       strokeLineDash:(BOOL)strokeLineDash
+                     usingTriangleFan:(BOOL)usingTriangleFan;
+
 
 /**
  * @brief 使用OpenGLES 绘制区域(带纹理轮廓线) \n注意：strokeLineWidth为0 或 strokeTexture为0 时不绘制轮廓线。
@@ -221,11 +240,11 @@
  * @param usingTriangleFan 若必为凸多边形输入YES，可能为凹多边形输入NO
  */
 - (void)renderTextureStrokedRegionWithPoints:(CGPoint *)points
-                                 pointCount:(NSUInteger)pointCount
-                                  fillColor:(UIColor *)fillColor
-                            strokeTineWidth:(CGFloat)strokeLineWidth
-                            strokeTextureID:(GLuint)strokeTexture
-                           usingTriangleFan:(BOOL)usingTriangleFan;
+                                  pointCount:(NSUInteger)pointCount
+                                   fillColor:(UIColor *)fillColor
+                             strokeTineWidth:(CGFloat)strokeLineWidth
+                             strokeTextureID:(GLuint)strokeTexture
+                            usingTriangleFan:(BOOL)usingTriangleFan;
 
 /**
  * @brief 使用OpenGLES 绘制图片
@@ -253,5 +272,10 @@
  * @return openGL纹理ID, 若纹理加载失败返回0
  */
 - (GLuint)loadStrokeTextureImage:(UIImage *)textureImage;
+
+/**
+ * @brief 当关联overlay对象有更新时，调用此接口刷新. since 5.0.0
+ */
+- (void)setNeedsUpdate;
 
 @end

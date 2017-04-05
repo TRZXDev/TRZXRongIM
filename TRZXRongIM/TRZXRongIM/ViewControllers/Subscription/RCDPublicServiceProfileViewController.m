@@ -18,7 +18,7 @@
 #import "RCDChooseView.h"
 #import <UIKit/UIKit.h>
 #import "RCDCommonDefine.h"
-#import "OpenShare.h"
+
 #import "KPTableViewDataSource.h"
 
 @interface RCDPublicServiceProfileViewController ()

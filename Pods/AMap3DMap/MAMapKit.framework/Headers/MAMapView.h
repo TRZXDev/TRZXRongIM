@@ -108,16 +108,16 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///是否以screenAnchor点作为锚点进行缩放，默认为YES。如果为NO，则以手势中心点作为锚点
 @property (nonatomic, assign) BOOL zoomingInPivotsAroundAnchorPoint;
 
-///是否支持缩放
+///是否支持缩放, 默认YES
 @property (nonatomic, getter = isZoomEnabled) BOOL zoomEnabled;
 
-///是否支持平移
+///是否支持平移, 默认YES
 @property (nonatomic, getter = isScrollEnabled) BOOL scrollEnabled;
 
-///是否支持旋转
+///是否支持旋转, 默认YES
 @property (nonatomic, getter = isRotateEnabled) BOOL rotateEnabled;
 
-///是否支持camera旋转
+///是否支持camera旋转, 默认YES
 @property (nonatomic, getter = isRotateCameraEnabled) BOOL rotateCameraEnabled;
 
 ///是否支持天空模式，默认为YES. 开启后，进入天空模式后，annotation重用可视范围会缩减
@@ -126,10 +126,10 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///是否显示楼块，默认为YES
 @property (nonatomic, getter = isShowsBuildings) BOOL showsBuildings;
 
-///是否显示底图标注
+///是否显示底图标注, 默认为YES
 @property (nonatomic, assign, getter = isShowsLabels) BOOL showsLabels;
 
-///是否显示交通
+///是否显示交通, 默认为NO
 @property (nonatomic, getter = isShowTraffic) BOOL showTraffic;
 
 ///设置实时交通颜色,key为 MATrafficStatus
@@ -138,16 +138,16 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///是否支持单击地图获取POI信息(默认为YES), 对应的回调是 -(void)mapView:(MAMapView *) didTouchPois:(NSArray *)
 @property (nonatomic, assign) BOOL touchPOIEnabled;
 
-///是否显示罗盘
+///是否显示指南针, 默认YES
 @property (nonatomic, assign) BOOL showsCompass;
 
-///罗盘原点位置
+///指南针原点位置
 @property (nonatomic, assign) CGPoint compassOrigin;
 
-///罗盘的宽高
+///指南针的宽高
 @property (nonatomic, readonly) CGSize compassSize;
 
-///是否显示比例尺
+///是否显示比例尺, 默认YES
 @property (nonatomic, assign) BOOL showsScale;
 
 ///比例尺原点位置
@@ -174,14 +174,16 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///是否允许降帧，默认为YES
 @property (nonatomic, assign) BOOL isAllowDecreaseFrame;
 
-///停止/开启 OpenGLES绘制, 对应回调是 - (void)mapView:(MAMapView *) didChangeOpenGLESDisabled:(BOOL)
+///停止/开启 OpenGLES绘制, 默认NO. 对应回调是 - (void)mapView:(MAMapView *) didChangeOpenGLESDisabled:(BOOL)
 @property (nonatomic, assign) BOOL openGLESDisabled;
+
+///地图的视图锚点。坐标系归一化，(0, 0)为MAMapView左上角，(1, 1)为右下角。默认为(0.5, 0.5)，即当前地图的视图中心 since V5.0.0
+@property (nonatomic) CGPoint screenAnchor;
 
 /**
  * @brief 设定当前地图的经纬度范围，该范围可能会被调整为适合地图窗口显示的范围
  * @param region 要设定的经纬度范围
  * @param animated 是否动画设置
- *
  */
 - (void)setRegion:(MACoordinateRegion)region animated:(BOOL)animated;
 
@@ -266,6 +268,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
  */
 - (MAMapStatus *)getMapStatus;
 
+
 /**
  * @brief 设置地图状态
  * @param status 要设置的地图状态
@@ -284,14 +287,8 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
             duration:(CFTimeInterval)duration;
 
 /**
- * @brief 自定义地图样式, 目前仅支持自定义标准类型.
- * @param customJson 自定义的JSON格式数据. 传nil恢复为默认样式.
- */
-- (void)setCustomMapStyle:(NSData*)customJson;
-
-/**
- * @brief 设置罗盘的图片
- * @param image 新的罗盘图片
+ * @brief 设置指南针的图片
+ * @param image 新的指南针图片
  */
 - (void)setCompassImage:(UIImage *)image;
 
@@ -635,12 +632,12 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 @end
 
 #if MA_INCLUDE_INDOOR
-@interface MAMapView (InDoor)
+@interface MAMapView (Indoor)
 
-///是否显示室内地图
+///是否显示室内地图, 默认NO
 @property (nonatomic, getter = isShowsIndoorMap) BOOL showsIndoorMap;
 
-///是否显示室内地图默认控件
+///是否显示室内地图默认控件, 默认YES
 @property (nonatomic, getter = isShowsIndoorMapControl) BOOL showsIndoorMapControl;
 
 ///默认室内地图控件的最大宽高
@@ -666,6 +663,19 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 @end
 #endif
 
+///自定义样式
+@interface MAMapView (CustomMapStyle)
+
+///是否开启自定义样式, 默认NO. since 5.0.0
+@property (nonatomic, assign) BOOL customMapStyleEnabled;
+
+/**
+ * @brief 自定义地图样式, 目前仅支持自定义标准类型. 默认不生效，调用mapCustomEnable=YES使生效.
+ * @param customJson 自定义的JSON格式数据.
+ */
+- (void)setCustomMapStyle:(NSData*)customJson;
+
+@end
 
 #pragma mark - MAMapViewDelegate
 @protocol MAMapViewDelegate <NSObject>
@@ -755,16 +765,16 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 - (void)mapView:(MAMapView *)mapView didAddAnnotationViews:(NSArray *)views;
 
 /**
- * @brief 当选中一个annotation views时，调用此接口
+ * @brief 当选中一个annotation view时，调用此接口. 注意如果已经是选中状态，再次点击不会触发此回调。取消选中需调用-(void)deselectAnnotation:animated:
  * @param mapView 地图View
- * @param view 选中的annotation views
+ * @param view 选中的annotation view
  */
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view;
 
 /**
- * @brief 当取消选中一个annotation views时，调用此接口
+ * @brief 当取消选中一个annotation view时，调用此接口
  * @param mapView 地图View
- * @param view 取消选中的annotation views
+ * @param view 取消选中的annotation view
  */
 - (void)mapView:(MAMapView *)mapView didDeselectAnnotationView:(MAAnnotationView *)view;
 
@@ -829,10 +839,9 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 - (void)mapView:(MAMapView *)mapView annotationView:(MAAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
 
 /**
- * @brief  标注view的calloutview整体点击时，触发改回调。
- *
- *  @param mapView 地图的view
- *  @param view calloutView所属的annotationView
+ * @brief 标注view的calloutview整体点击时，触发改回调。
+ * @param mapView 地图的view
+ * @param view calloutView所属的annotationView
  */
 - (void)mapView:(MAMapView *)mapView didAnnotationViewCalloutTapped:(MAAnnotationView *)view;
 

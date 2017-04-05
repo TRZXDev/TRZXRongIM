@@ -48,6 +48,26 @@
 + (instancetype)groundOverlayWithCoordinate:(CLLocationCoordinate2D)coordinate
                                   zoomLevel:(CGFloat)zoomLevel
                                        icon:(UIImage *)icon;
+
+/**
+ * @brief 更新GroundOverlay. since 5.0.0
+ * @param bounds 图片的在地图的覆盖范围
+ * @param icon   覆盖图片
+ * @return 返回是否成功
+ */
+- (BOOL)setGroundOverlayWithBounds:(MACoordinateBounds)bounds icon:(UIImage *)icon;
+
+/**
+ * @brief 更新GroundOverlay. since 5.0.0
+ * @param coordinate 图片的在地图上的中心点
+ * @param zoomLevel  图片在地图尺寸等同于像素的zoom值
+ * @param icon       覆盖图片
+ * @return 返回是否成功
+ */
+- (BOOL)setGroundOverlayWithCoordinate:(CLLocationCoordinate2D)coordinate
+                             zoomLevel:(CGFloat)zoomLevel
+                                  icon:(UIImage *)icon;
+
 @end
 
 #endif

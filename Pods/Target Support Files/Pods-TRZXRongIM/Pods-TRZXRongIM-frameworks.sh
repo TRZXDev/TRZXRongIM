@@ -90,9 +90,6 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AXNavigationBackItemInjection/AXNavigationBackItemInjection.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AXWebViewController/AXWebViewController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Aspects/Aspects.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CTMediator/CTMediator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DVSwitch/DVSwitch.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FDStackView/FDStackView.framework"
@@ -103,7 +100,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/MJRefresh/MJRefresh.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MLLabel/MLLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Masonry/Masonry.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NJKWebViewProgress/NJKWebViewProgress.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveCocoa/ReactiveCocoa.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDAutoLayout/SDAutoLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
@@ -130,7 +126,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/TRZXProjectScreeningBusinessCategory/TRZXProjectScreeningBusinessCategory.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXShare/TRZXShare.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXShareView/TRZXShareView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TRZXWebView/TRZXWebView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXWebViewCategory/TRZXWebViewCategory.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXZJWPhotoPicker/TRZXZJWPhotoPicker.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TZImagePickerController/TZImagePickerController.framework"
@@ -141,9 +136,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AXNavigationBackItemInjection/AXNavigationBackItemInjection.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AXWebViewController/AXWebViewController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Aspects/Aspects.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CTMediator/CTMediator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DVSwitch/DVSwitch.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FDStackView/FDStackView.framework"
@@ -154,7 +146,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/MJRefresh/MJRefresh.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MLLabel/MLLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Masonry/Masonry.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NJKWebViewProgress/NJKWebViewProgress.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveCocoa/ReactiveCocoa.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDAutoLayout/SDAutoLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
@@ -181,7 +172,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/TRZXProjectScreeningBusinessCategory/TRZXProjectScreeningBusinessCategory.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXShare/TRZXShare.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXShareView/TRZXShareView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TRZXWebView/TRZXWebView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXWebViewCategory/TRZXWebViewCategory.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TRZXZJWPhotoPicker/TRZXZJWPhotoPicker.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TZImagePickerController/TZImagePickerController.framework"

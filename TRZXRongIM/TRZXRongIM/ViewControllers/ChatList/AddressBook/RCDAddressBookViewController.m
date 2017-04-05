@@ -27,7 +27,7 @@
 #import "RCDAddFriendListViewController.h"
 #import "UISearchBar+RCExtension.h"
 #import "RCDGroupChatViewController.h"
-#import "OpenShare.h"
+
 #import "RCDSelectedSendView.h"
 #import "RCDCollectionMessage.h"
 //#import "ConsultingDetailsViewController.h"

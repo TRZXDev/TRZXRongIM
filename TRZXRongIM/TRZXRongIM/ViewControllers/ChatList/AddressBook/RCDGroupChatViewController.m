@@ -19,7 +19,7 @@
 #import "RCDataBaseManager.h"
 #import "RCDCollectionMessage.h"
 #import "RCDPublicMessage.h"
-#import "OpenShare.h"
+
 #import "RCDCommonDefine.h"
 
 
